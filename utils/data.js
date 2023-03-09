@@ -19,7 +19,7 @@ const names = [
     "Quincy",
     "Rachel",
     "Steven",
-    "Timothy",
+    "Tete",
     "Ulrik",
     "Valerie",
     "Winston",
