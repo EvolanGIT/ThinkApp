@@ -12,7 +12,7 @@ console.log("connected");
 await Thought.deleteMany({});
 
 // Drop any Users
-await User.deleteMany({});
+// await User.deleteMany({});
 
 const users = [];
 
@@ -22,7 +22,7 @@ let thoughts;
     for (let i = 0; i < 20; i++) {
     const username = getRandomName();
     const email = getRandomEmail();
-    thoughts = [...getRandomThoughts(10)];
+    thoughts = [...getRandomThoughts(3)];
     const friendsArray = []
     const friendsFunc = () => { 
     for (let i = 0; i < 3; i++) {
@@ -38,9 +38,9 @@ let thoughts;
     });
     };
         for (let i = 0; i < users.length; i++){
-    Thought.collection.insertMany(users[i].thoughts)
+        Thought.collection.insertMany(users[i].thoughts)
     .then((createThought) => {
-    return User.collection.insertMany({
+        return User.collection.insertMany({
         username:users[i].username,
         email: users[i].email,
         friendsArray: users[i].friendsArray,

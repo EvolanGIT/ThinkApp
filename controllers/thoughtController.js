@@ -34,7 +34,7 @@ Thought.create(req.body)
     .then((thought) => {
     return User.findOneAndUpdate(
         { username: req.body.username },
-        { $addToSet: { thoughts: thought._id } },
+        { $addToSet: { thoughts: thought._id, } },
         { new: true }
     );
     })
